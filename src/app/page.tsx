@@ -60,7 +60,7 @@ export default function SignupPage() {
 
     // Handle special case for role = "admin"
     if (role === "admin") {
-      toast.success("Aukaad mein rehe bsdk");
+      toast.error("Aukaad mein rehe bsdk");
       setLoading(false);
       return;
     }
@@ -73,7 +73,7 @@ export default function SignupPage() {
           email: email.trim(),
           name: name.trim(),
           reg_no: regno.trim(),
-          fuck_you: "cooking",
+          fuck_you: process.env.NEXT_PUBLIC_KEY,
         }
       );
 
